@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario</title>
+</head>
+<body>
+    <h1>Ejemplo de formulario</h1>
+    <form action="" id="form-order">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Santiago Gonzalez" autofocus autocomplete="on" required>
+        </p>
+        <p>
+            <label for="password">contraseña</label>
+            <input type="password" name="password" id="password" placeholder="abc1234" pattern="[a-z]{3}[0-9]{4}" required>
+            (La contraseña debe tener 3 letras y 4 numeros en este orden)
+        </p>
+        <p>
+            <label for="tel">Telefono</label>
+            <input type="tel" name="tel" id="tel" placeholder="3138303319" pattern="[0-9]{10}" required>
+        </p>
+        <p>
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email" placeholder="alejandro@outlook.com" required>
+        </p>
+        <p>
+            <label for="website">Sitio Web</label>
+            <input type="url" name="website" id="website" placeholder="www.google.com">
+        </p>
+        <p>
+            <label for="numberexample">N. de temas</label>
+            <input type="number" name="numberexample" id="numberexample" min="1" max="10" placeholder="2" step="2">
+        </p>
+        <p>
+            <label for="deliverydate">Fecha de envio</label>
+            <input type="date" name="deliverydate" id="deliverydate" min="2021-01-01">
+            (Minimo 01-01-2021)
+        </p>
+        <p>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color" value="#1A33FF">
+        </p>
+        <p>
+            <label for="search">Buscar</label>
+            <input type="search" name="search" id="seach">
+        </p>
+        <p>
+            <label for="points">Rango de valores</label>
+            <input type="range" name="points" id="points" min="1" max="10">
+        </p>
+
+        <p>Agrupacion de tipo "radio"</p>
+        <p>
+            <fieldset><!--Dibuja una caja alredodor de los elemntos agrupados-->
+                <legend>Selecciona una prioridad</legend><!--Titulo para el conjunto de elementos agrupados-->
+                <p><label for=""> <input type="radio" name="priority" value="baja" checked>Baja</label></p>
+                <p><label for=""> <input type="radio" name="priority" value="media">Media</label></p>
+                <p><label for=""> <input type="radio" name="priority" value="alta">Alta</label></p>
+            </fieldset>
+        </p>
+        
+        <!-- los checkbox permiten seleccioar varios elementos, a difernecia de los radio-->
+        <p>Agrupacion de tipo checkbox</p>
+        <p>
+            <fieldset>
+                <legend>Seleccione el tipo de envio</legend>
+                <p><label for=""> <input type="checkbox" name="deliverytype" value="urgente" checked>Urgente</label></p>
+                <p><label for=""> <input type="checkbox" name="deliverytype" value="acuse">Con acuse de recibido</label></p>
+                <p><label for=""> <input type="checkbox" name="deliverytype" value="reembolso">Contra reembolso</label></p>
+            </fieldset>
+        </p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
